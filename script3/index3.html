@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Активное время пользователя</title>
+
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #121212;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+
+    .counter {
+      text-align: center;
+      font-size: 2rem;
+      background: #1e1e1e;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .counter span {
+      display: block;
+      font-size: 4rem;
+      margin-top: 10px;
+      color: #4caf50;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="counter">
+    Активное время на странице:
+    <span id="time">0:00</span>
+  </div>
+
+  <script src="script3.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Учёт расходов</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="app-container">
+    <h1 class="app-title">Учёт расходов</h1>
+
+    <form id="expenseForm" class="expense-form">
+      <div class="form-group">
+        <label for="description">Описание:</label>
+        <input type="text" id="description" placeholder="Например, кофе или аренда" required>
+      </div>
+
+      <div class="form-group">
+        <label for="amount">Сумма(₽): </label>
+        <input type="number" id="amount" placeholder="Введите сумму" required>
+      </div>
+
+      <div class="form-group">
+        <label for="date">Дата:</label>
+        <input type="date" id="date" required>
+      </div>
+
+      <button type="submit" class="btn">Добавить расход</button>
+      <button type="button" id="clearBtn" class="btn clear">Очистить список</button>
+    </form>
+
+    <h2 class="list-title">Список расходов</h2>
+    <ul id="expenseList" class="expense-list"></ul>
+    <h3 id="totalExpenses">Итого: 0 ₽</h3>
+
+  </div>
+
+  <script src="script2.js"></script>
+</body>
+
+</html>
