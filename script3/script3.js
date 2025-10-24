@@ -30,8 +30,27 @@ function startTimer() {
   }
 }
 
+function stopTimer() {
+  if (timer) {
+    clearInterval(timer);
+    timer = null;
+  }
+}
+
 ["mousemove", "keydown", "scroll", "click"].forEach(event => {
   window.addEventListener(event, startTimer);
+});
+
+window.addEventListener("beforeunload", () => {
+  stopTimer();
+});
+
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden) {
+    stopTimer();
+  } else {
+    startTimer();
+  }
 });
 
 updateActiveTime();
